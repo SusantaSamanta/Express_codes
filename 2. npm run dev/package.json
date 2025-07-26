@@ -1,0 +1,16 @@
+{
+  "name": "2.-npm-run-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2. index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "node --watch index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* body{
+            padding-bottom: 50px;
+            border: 2px solid;
+        } */
+        #naveBar{
+            height: 40px;
+            margin-bottom: 50px;
+            padding-right: 50px;
+            background: #404040;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            p{
+                margin-left: 20px;
+                padding: 3px;
+                color: white;
+                text-decoration: none;
+                border: 2px solid #404040;
+                /* user-select: none; */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="naveBar">
+        <p id="naveLinks1" >Home</p>
+        <p id="naveLinks2" >Student</p>
+        <p id="naveLinks3" >Student report</p>
+    </div>
+    <script>
+
+        let lastClick = localStorage.getItem('lastClick');
+        lastClick != null?  document.getElementById(lastClick).style = "border: 2px solid #404040;" : 'not'
+        
+        let nowClick = localStorage.getItem('nowClick');
+        nowClick != null? document.getElementById(nowClick).style = "border-bottom: 2px solid white;" : 'not';
+
+        let naveBar = document.getElementById("naveBar");
+        naveBar.addEventListener("click", (event) => {
+            nowClick = event.target.id;
+            localStorage.setItem('nowClick', nowClick);
+            console.log('last :',lastClick, '    new: ', nowClick);
+            document.getElementById(nowClick).style = "border-bottom: 2px solid white;";
+            lastClick = event.target.id;
+            localStorage.setItem('lastClick', lastClick);
+        })
+
+
+
+
+    </script>
+</body>
+</html>
