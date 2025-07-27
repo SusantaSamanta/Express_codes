@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head> 
+<body>
+    <section id="background">
+        <h1>Hello welcome to my Store</h1>
+        <br>
+        <br>
+        <br>
+        <p>This html and css file are send by Express Static Middleware : app.use(express.static("public")) . Where can access public folder.</p>
+        <p id="urlInformation">This page run on :</p>
+    </section>
+
+
+
+    <script>
+
+        const setData = async() => {
+            const backendData = await fetch('/urlData', {
+                method: "GET"
+            });
+            const data = await backendData.json();
+            document.getElementById("urlInformation").innerHTML = data.data;
+            console.log(data.data);
+        }
+        setData();
+
+
+
+    </script>
+</body>
+</html>
+
+

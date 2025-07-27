@@ -1,0 +1,17 @@
+{
+  "name": "4.-zod-validation-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zod.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon zod.js",
+    "dev": "node --watch zod.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.9",
+    "zod": "^3.24.2"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Input Box Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input,
+    button {
+      margin: 10px 0;
+      padding: 8px;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1>Welcome to Query parameter example</h1>
+    <h2>Enter Product Details</h2>
+
+    <input type="text" id="input1" placeholder="Enter product type"><br>
+    <input type="text" id="input2" placeholder="Enter product name"><br>
+    <input type="text" id="input3" placeholder="Enter color"><br>
+
+    <button onclick="handleSubmit()">Submit</button>
+
+    <p id="result"></p>
+  </center>
+  <script>
+    function handleSubmit() {
+      const type = document.getElementById("input1").value;
+      const name = document.getElementById("input2").value;
+      const color = document.getElementById("input3").value;
+      const reqUrl = `http://localhost:3007/product?proType=${type}&prod=${name}&color=${color}`;
+      window.location.href = reqUrl;
+    }
+  </script>
+
+</body>
+
+</html>
