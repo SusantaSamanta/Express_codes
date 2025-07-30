@@ -1,0 +1,16 @@
+{
+  "name": "db_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch app.js"
+  },
+  "author": "susanta",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.17.0"
+  }
+}

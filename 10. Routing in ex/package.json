@@ -1,0 +1,12 @@
+{
+  "name": "5.-fine-send",
+  "version": "1.0.0",
+  "description": "file send",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch app.js"
+  },
+  "author": "susanta",
+  "license": "ISC"
+}

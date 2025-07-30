@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <%- include('navebar') %>     <!--  this navebar.ejs file can access for the line app.use('view engine', 'ejs')-->
+    <center>
+        <h1>Hello this is student report page</h1>
+        <h2>Student Name : <%= details.name %> </h2>
+        <h2>Student Roll : <%= details.roll %> </h2>
+        <h2>Student Subject : <%= details.sub %> </h2>
+        <h2>Student Marks : <%= details.mark %> </h2>
+        <!--   details is send by the student.js file  -->
+    </center>
+</body>
+</html>
+

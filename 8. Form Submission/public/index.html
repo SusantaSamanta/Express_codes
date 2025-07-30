@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Input Box Example</title>
+  <style>
+    body {
+      color: #63e5ff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input,
+    button {
+      margin: 10px 0;
+      padding: 8px;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1>Welcome to Form Handling example</h1>
+    <h2>Enter Product Details</h2>
+
+    <form action="/product" method="post"> <!-- if the method='post' then it is not like a query request -->
+      <!-- if the method='get' -> this form hit "/product" query request like:- http://localhost:3008/product?type=Mobile&name=Iphon&color=red
+                                  and send an object as 'req' where key is the name of form elements 
+                                  and value is the value of the form element  --> 
+
+
+                                     <!-- we use post method to hide the sensitive data in query url request -->
+
+      <input type="text" name="type" id="input1" placeholder="Enter product type"><br>
+      <input type="text" name="name" id="input2" placeholder="Enter product name"><br>
+      <input type="text" name="color" id="input3" placeholder="Enter color"><br>
+
+      <button>Submit</button>
+    </form>
+
+
+
+
+
+  </center>
+
+
+
+</body>
+
+</html>
